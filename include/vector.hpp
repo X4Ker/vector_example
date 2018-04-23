@@ -105,7 +105,7 @@ void vector_t::push_back(int value)
 	if (size_ == capacity_) {
 		if (capacity_ == 0) capacity_ = 1;
 		else capacity_ *= 2;
-		T * p = new T[capacity_];
+		int * p = new int[capacity_];
 		for (std::size_t i = 0; i<size_; i++) {
 			p[i] = elements_[i];
 		}
@@ -122,7 +122,7 @@ void vector_t::pop_back()
 	size_--;
 	if (size_ == capacity_ / 4) {
 		capacity_ /= 2;
-		T * p = new T[capacity_];
+		int * p = new int[capacity_];
 		for (std::size_t i = 0; i<size_; i++) {
 			p[i] = elements_[i];
 		}
