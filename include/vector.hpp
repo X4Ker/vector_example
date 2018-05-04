@@ -59,6 +59,7 @@ vector_t & vector_t::operator =(vector_t const & other)
 		elements_[i] = other.elements_[i];
 	}
 	}
+	
 	return *this;
 }
 
