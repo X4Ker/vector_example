@@ -50,7 +50,6 @@ vector_t & vector_t::operator =(vector_t const & other)
 {
 	if (this != &other) {
 		delete[] elements_;
-	}
 
 	size_ = other.size_;
 	capacity_ = other.capacity_;
@@ -59,7 +58,7 @@ vector_t & vector_t::operator =(vector_t const & other)
 	for (std::size_t i = 0; i < size_; ++i) {
 		elements_[i] = other.elements_[i];
 	}
-
+	}
 	return *this;
 }
 
