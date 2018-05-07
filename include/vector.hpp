@@ -26,9 +26,8 @@ public:
 	T & at (std::size_t index);
 
 	bool operator ==(vector_t const & other) const;
+	bool operator !=(vector_t<T> const & lhs, vector_t<T> const & rhs);
 };
-
-bool operator !=(vector_t<T> const & lhs, vector_t<T> const & rhs);
 
 template <typename T>
 vector_t<T>::vector_t()
@@ -115,7 +114,7 @@ void vector_t<T>::push_back(T value)
 	if (size_ == capacity_) {
 		if (capacity_ == 0) capacity_ = 1;
 		else capacity_ *= 2;
-		int * p = new T[capacity_];
+		T * p = new T[capacity_];
 		for (std::size_t i = 0; i<size_; i++) {
 			p[i] = elements_[i];
 		}
