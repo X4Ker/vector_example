@@ -25,8 +25,7 @@ public:
 	T operator [](std::size_t index) const;
 	T & at (std::size_t index);
 
-	bool operator ==(vector_t const & other) const;
-	bool operator !=(vector_t<T> const & lhs, vector_t<T> const & rhs);
+	bool operator ==(vector_t<T> const & other) const;
 };
 
 template <typename T>
